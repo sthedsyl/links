@@ -1,14 +1,14 @@
-import {Text,View, Pressable} from "react-native";
-import "../global.css";
+import {Text,View,Image} from "react-native";
+import {MaterialIcons} from "@expo/vector-icons";
+import '../global.css'; 
+
 
 export default function Index() {
   return (
-      <View className="bg-white p-4 rounded shadow-md mt-10">
-        <Text className="text-lg font-bold">Bem-vindo ao App!</Text>
-        <Text className="text-black">Hello World</Text>
-        <Pressable className="bg-blue-500 px-4 py-4 rounded mt-4" onPress={() => alert("Botão pressionado!")}>
-          <Text className="text-white">Clique aqui!</Text>
-        </Pressable>
+      <View className="container bg-gray-950 flex-1 pt-20">
+        <View className="header pl-6  ">
+          <Image source={require('../assets/logo.png')} className="w-12 h-12" />
+        </View>
       </View>
   );
 }
